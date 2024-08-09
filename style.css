@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: content-box;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
+    
 }
 
 body{
@@ -10,57 +11,119 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 5fr;
-    grid-template-rows: 1fr 1fr 4fr;
-    
+    grid-template-rows: 10vh 10vh 4fr;
+    overflow: hidden;
+    background-color: #E2E8F0;
 }
+
 
 nav{
-    height: 20%;
+    height: 10vh;
     grid-area: 1/2/2/-1;
-    display: flex;
-    align-items: center;
 
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 50px 5fr 50px 50px 1fr;
+    align-items: center;
+    padding: 0 50px 0 40px;
+    justify-items: center;
 }
+nav input{
+    width: 70%;
+    justify-self: start;
+    outline: none;
+    border: none;
+    background-color: #E2E8F0;
+    height: 25px;
+    border-radius: 50px;
+}
+
 .icon1{
     height: 40px;
 }
 
 .head{
-    height: 30%;
+    background-color: white;
+    height: 10vh;
     grid-area: 2/2/3/-1;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+    grid-template-columns: 80px 3fr 1fr 1fr 1fr;
+    padding: 0 50px 10px 40px;
+    justify-items: center;
+    align-items: center;
 }
 
 .icon2{
     height: 60px;
-    grid-area: 1/1/2/2;
+    
 }
 .head_text{
-    grid-area: 1/2/2/3;
+    justify-self: start
+}
+
+button{
+    padding: 10px 30px;
+    border: none;
+    background-color: #1992D4;
+    color: white;
+    border-radius: 50px;
 }
 
 
 .sidebar{
+    background-color: #1992D4;
+    color: white;
     height: 100%;
     grid-area: 1/1/-1/2;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 80px 180px 100px;
     gap: 20px;
+    padding: 10px;
+    
 }
-.dash,.pages ,.config{
+.pages svg, .config svg{
+    fill: white;
+    height: 20px;
+}
+.dash{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: space-evenly;
+}
+.dash svg{
+    fill: white;
+    height: 40px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 0.9em;
+    
+}
+
+.pages ,.config{
     display: grid;
     grid-template-columns: 20px 1fr;
     grid-auto-rows: 20px;
     gap: 10px;
+    align-items: center;
+    align-content: space-evenly;
+    padding: 0 20px ;
+}
+.config{
+    margin-top: 20px;
 }
 
 svg{
     height: 20px;
+    
 }
 
 .main{
-    height: 50%;
+    /* height: 65vh; */
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 20px;
@@ -68,6 +131,7 @@ svg{
 }
 
 .projects{
+    height: 50vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 30px repeat(3, 1fr);
@@ -81,11 +145,48 @@ svg{
 
 
 .rightbar{
-    height: 50%;
+    height: 450px;
+    width: 18vw;
 }
 .card2, .card3{
-    height: 25%;
+    height: 33vh;
+    font-size: small;
+    
+}
+
+.card2{
+    
+    
+    
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+.elem1 p{
+    /* height: 5vh; */
+    text-overflow: ellipsis;
+}
+
+/* .card2 p{
+    text-overflow: ellipsis;
+} */
+
+.card3{
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(8, 20px);
+}
+.elem2 div{
+    height: 40px;
+    display: grid;
+    grid-template-columns: 1fr 170px;
+    grid-template-rows: 1fr 1fr;
+    
 }
 .elem2 img{
     height: 40px;
+    grid-area: 1/1/3/2;
 }
+
+
