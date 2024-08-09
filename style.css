@@ -12,7 +12,7 @@ body{
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 5fr;
     grid-template-rows: 10vh 10vh 4fr;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: #E2E8F0;
 }
 
@@ -38,7 +38,7 @@ nav input{
     border-radius: 50px;
 }
 
-.icon1{
+.icon1, .card3 img{
     height: 40px;
 }
 
@@ -156,6 +156,7 @@ svg{
 
 .card p{
     grid-area: 2/1/3/5;
+    color: rgb(70, 70, 70);
 }
 .card svg:first-of-type{
     grid-area: 3/2/4/3;
@@ -167,57 +168,55 @@ svg{
     grid-area: 3/4/4/5;
 }
 
-/* .svgs{
-    display: grid;
-    grid-template-columns: repeat(3, 25px);
-    gap: 10px;
-    justify-content: end;
-} */
-
 
 .rightbar{
-    height: 450px;
+    /* height: 450px; */
     width: 18vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .card2, .card3{
-    height: 33vh;
-    font-size: small;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
     
 }
 
-.card2{
-    
-    
-    
-    overflow: hidden;
-    white-space: nowrap;
-    
-}
-.elem1 p{
-    /* height: 5vh; */
-    text-overflow: ellipsis;
-}
 
-/* .card2 p{
-    text-overflow: ellipsis;
-} */
+.rows{
+    height: 55px;
+    padding-bottom: 10px;
+    
+    font-size: 0.9em;
+    border-bottom: 1px solid #a3a3a3ad;
+}
+.rows p{
+    font-size: 0.7em;
+    font-weight: 500;
+    color: rgb(70, 70, 70);
+}
 
 .card3{
-    
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 50px 2fr;
     grid-template-rows: repeat(8, 20px);
-}
-.elem2 div{
-    height: 40px;
-    display: grid;
-    grid-template-columns: 1fr 170px;
-    grid-template-rows: 1fr 1fr;
+    font-size: 0.9em;
+    gap: 3px;
     
 }
-.elem2 img{
-    height: 40px;
-    grid-area: 1/1/3/2;
+.card3 h3{
+    grid-area: 1/1/2/3;
+    
 }
+.card3 img{
+    grid-column: 1;
+    
+}
+.card3 p{
+    grid-column: 2;
+    font-size: 0.7em;
+}
+
 
 
